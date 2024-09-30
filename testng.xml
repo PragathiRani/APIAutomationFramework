@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Dell/IdeaProjects/APIAutomationFramework">
+        <classes>
+            <class name="org.example.tests.crud.testCreateBookingGET">
+                <methods>
+                    <include name="testVerifyCreateBookingGET01"/>
+                </methods>
+            </class>
+            <class name="org.example.tests.crud.testCreateBookingPOST">
+                <methods>
+                    <include name="testVerifyCreateBookingPOST01"/>
+                </methods>
+            </class>
+            <class name="org.example.tests.integration.TCIntegrationFlow">
+                <methods>
+                    <include name="testCreateBooking"/>
+                    <include name="testVerifyBookingId"/>
+                    <include name="testUpdateBookingByID"/>
+                    <include name="testDeleteBookingById"/>
+                </methods>
+            </class>
+            <class name="org.example.tests.integration.TCIntegrationFlowRetry">
+                <methods>
+                    <include name="testCreateBooking"/>
+                    <include name="testVerifyBookingId"/>
+                    <include name="testUpdateBookingByID"/>
+                    <include name="testDeleteBookingById"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

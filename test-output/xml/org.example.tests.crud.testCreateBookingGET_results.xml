@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Dell/IdeaProjects/APIAutomationFramework"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.114">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testVerifyCreateBookingGET01"
+                time="0.114"
+                classname="org.example.tests.crud.testCreateBookingGET">
+            </testcase>
+</testsuite>

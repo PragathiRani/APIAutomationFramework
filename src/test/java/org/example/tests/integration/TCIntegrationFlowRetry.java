@@ -5,6 +5,7 @@ import io.qameta.allure.Owner;
 import io.restassured.RestAssured;
 import org.example.base.BaseTest;
 import org.example.endpoints.APIConstants;
+import org.example.listeners.RetryAnalyzer;
 import org.example.pojos.Booking;
 import org.example.pojos.BookingResponse;
 import org.example.utils.PropertyReader;
@@ -14,8 +15,8 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-
-public class TCIntegrationFlow extends BaseTest {
+@Test(retryAnalyzer = RetryAnalyzer.class)
+public class TCIntegrationFlowRetry extends BaseTest {
 
     // Create A Booking, Create a Token
     // Get booking
@@ -127,7 +128,7 @@ public class TCIntegrationFlow extends BaseTest {
         requestSpecification.basePath(basePathDELETE).cookie("token", token);
         validatableResponse = RestAssured.given().spec(requestSpecification)
                 .when().delete().then().log().all();
-        validatableResponse.statusCode(201);
+        validatableResponse.statusCode(200);
 
 
     }
